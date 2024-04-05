@@ -1,0 +1,17 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  username: postgres
+  password:
+
+development:
+  <<: *default
+  database: safety_development
+
+staging:
+  <<: *default
+  database: safety_staging
+
+production:
+  <<: *default
+  database: safety_production
